@@ -21,9 +21,9 @@ function getConversation($user_id, $conn){
         **/
         $user_data = [];
         
-        # looping through the conversations
+        # Recorriendo la conversación 
         foreach($conversations as $conversation){
-            # if conversations user_1 row equal to user_id
+            # 
             if ($conversation['user_1'] == $user_id) {
             	$sql2  = "SELECT *
             	          FROM users WHERE user_id=?";
@@ -38,7 +38,7 @@ function getConversation($user_id, $conn){
 
             $allConversations = $stmt2->fetchAll();
 
-            # pushing the data into the array 
+            # 
             array_push($user_data, $allConversations[0]);
         }
 

@@ -1,16 +1,16 @@
 <?php 
 
-# server name
+# Nombre Servidor
 $sName = "localhost";
-# user name
+# Nombre Usuario
 $uName = "root";
 # password
-$pass = "";
+$pass = "root";
 
-# database name
-$db_name = "chat_app_db";
+# Nombre BD
+$db_name = "chat";
 
-#creating database connection
+#Creación de la Conexión de BD
 try {
     $conn = new PDO("mysql:host=$sName;dbname=$db_name", 
                     $uName, $pass);

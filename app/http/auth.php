@@ -5,16 +5,16 @@ session_start();
 if(isset($_POST['username']) &&
    isset($_POST['password'])){
 
-   # database connection file
+   # Conexión con el archivo BD
    include '../db.conn.php';
    
-   # get data from POST request and store them in var
+   # 
    $password = $_POST['password'];
    $username = $_POST['username'];
    
    #simple form Validation
    if(empty($username)){
-      # error message
+      # mensaje de error
       $em = "Username is required";
 
       # redirect to 'index.php' and passing error message
